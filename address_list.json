@@ -1,0 +1,14 @@
+{
+  "ping_frequency_sec": 1,
+  "ping_timeout_ms": 3000,
+  "addresses": [
+    {
+      "name": "foobar",
+      "address": "127.0.0.1:8080"
+    },
+    {
+      "name": "foobar_backup",
+      "address": "127.0.0.2:8080"
+    },
+  ]
+}

@@ -1,0 +1,6 @@
+TODO:
+- load data from File
+- ensure at least one address or exit with warning
+- set up go on laptop
+- build/run code, then port to linux vm, make sure args to ping are same
+  - can cross compile for other OS--golang for the win!
