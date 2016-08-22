@@ -2,5 +2,11 @@ TODO:
 - load data from File
 - ensure at least one address or exit with warning
 - set up go on laptop
+- add actual pinging with goroutines that use time.after() or whatever to get
+  pings on a schedule.
+   - have time.after spawn goroutines, so actual scheduling isnt slowed by
+     pings.  TODO: add note about why using os/exec since ping uses sockets
+     that generally require root but ping cmdline tool has linux setid to allow
+     the priviledged behavior without root perms.
 - build/run code, then port to linux vm, make sure args to ping are same
   - can cross compile for other OS--golang for the win!
