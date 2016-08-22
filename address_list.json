@@ -1,14 +1,14 @@
 {
   "ping_frequency_sec": 1,
-  "ping_timeout_ms": 3000,
+  "ping_timeout_sec": 3,
   "addresses": [
     {
-      "name": "foobar",
-      "address": "127.0.0.1:8080"
+      "name": "TheGoogle",
+      "address": "www.google.com"
     },
     {
-      "name": "foobar_backup",
-      "address": "127.0.0.2:8080"
-    },
+      "name": "O3bNetworks",
+      "address": "www.o3bnetworks.com"
+    }
   ]
 }
