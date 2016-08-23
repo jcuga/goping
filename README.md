@@ -17,7 +17,7 @@ go build goping.go
 ## Sample output
 ```
 2016/08/22 22:50:09 event='program_args' config_filename='address_list.json'
-2016/08/22 22:50:09 event='config_values' timeout_sec='1' ping_freq_sec='3'
+2016/08/22 22:50:09 event='config_values' timeout_sec='3' ping_freq_sec='1'
 2016/08/22 22:50:10 event='ping_latency' name='TheGoogle' addresss='www.google.com' latency_ms='16'
 2016/08/22 22:50:10 event='ping_latency' name='CNN' addresss='www.cnn.com' latency_ms='21'
 2016/08/22 22:50:11 event='ping_latency' name='TheGoogle' addresss='www.google.com' latency_ms='24'
