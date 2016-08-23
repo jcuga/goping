@@ -1,6 +1,6 @@
 TODO:
-- ensure at least one address or exit with warning
-- test on mac
-- test on linux
-- add README explain why cmd based due to ICMP port require root but ping cmd has setid
-- add windows support
+- add code for windows
+- make sure cmd and gitbash/cygwin produce same crap
+  - both in terms of input args and output data (regexp still work?)
+- add README
+- add link to comments of various net posts about how you cant ping directly
