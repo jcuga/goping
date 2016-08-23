@@ -103,8 +103,8 @@ func main() {
 	if err != nil {
 		log.Fatalf("Error parsing config file: %s\n", err)
 	}
-	log.Printf("event='config_values' timeout_sec='%d' ping_freq_sec='%d'\n", config.PingFrequencySec,
-		config.PingTimeoutSec)
+	log.Printf("event='config_values' timeout_sec='%d' ping_freq_sec='%d'\n", config.PingTimeoutSec,
+		config.PingFrequencySec)
 	if len(config.Addresses) == 0 {
 		log.Fatalf("No addresses listed in config.  Nothing to ping.  Abort!\n")
 	}
