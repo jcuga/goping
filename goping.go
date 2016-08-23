@@ -47,7 +47,7 @@ func parseResults(cmd *exec.Cmd, name, address string, pattern *regexp.Regexp) {
 	if len(output) > 0 {
 		for _, line := range strings.Split(string(output), "\n") {
 			if matches := pattern.FindStringSubmatch(line); matches != nil && len(matches) >= 2 {
-				log.Printf("event='ping_latency' name='%s' addresss='%s' latency_ms='%s'\n", name, address, matches[1])
+				log.Printf("event='ping_latency' name='%s' addresss='%s' latency_ms='%s'\n", name, address, strings.TrimSpace(matches[1]))
 				return
 			}
 		}
