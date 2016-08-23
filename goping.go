@@ -70,7 +70,11 @@ func pingMac(address, name string, timeoutSec int, pattern *regexp.Regexp) {
 }
 
 func pingWindows(address, name string, timeoutSec int, pattern *regexp.Regexp) {
-	log.Fatalf("TODO: support windows\n")
+	// -n 1 --> send one packet/echo -w <miliseconds> wait up to this many ms for
+	// each reply (only one reply in this case...).  Note the * 1000 since we're
+	// configured with seconds and this arg takes miliseconds.
+	cmd := exec.Command("ping", "-n", "1", "-w", strconv.Itoa(timeoutSec*1000), address)
+	parseResults(cmd, name, address, pattern)
 }
 
 func ping(config *Config, address, name string, pattern *regexp.Regexp) {
@@ -90,9 +94,8 @@ func ping(config *Config, address, name string, pattern *regexp.Regexp) {
 }
 
 func main() {
-	// TODO: if this pattern is different for windows, make condition here
-	// but this covers both mac/linux ping results
-	LATENCY_PATTERN := regexp.MustCompile("time=(.*) ms")
+	// This should work for linux/windows/mac ping results:
+	LATENCY_PATTERN := regexp.MustCompile("time=(.*) *ms")
 	addressListFilename := flag.String("f", "address_list.json", "File of addresses to ping.")
 	flag.Parse()
 	log.Printf("event='program_args' config_filename='%s'\n", *addressListFilename)
