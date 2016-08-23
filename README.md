@@ -1,6 +1,8 @@
 # goping
 Reads a list of addresses, ping frequency, and ping timeout from confing json file and logs ping results.
 
+This provides cross platform pings (linux, windows, mac osx).  Under the hood it uses exec.cmd using the native ping command.  The reason for this is that sending ICMP packets requires root privileges.  But the native ping command uses setid or similar to grant permissions so non-root users (or in this case programs) can ping just fine.
+
 ## How to use
 ```
 go build goping.go
@@ -43,5 +45,4 @@ go build goping.go
     }
   ]
 }
-
 ```
