@@ -1,6 +1,0 @@
-TODO:
-- add code for windows
-- make sure cmd and gitbash/cygwin produce same crap
-  - both in terms of input args and output data (regexp still work?)
-- add README
-- add link to comments of various net posts about how you cant ping directly
